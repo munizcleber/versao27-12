@@ -1,0 +1,140 @@
+/* Estilização do Container */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 20px;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal input,
+.modal textarea {
+  width: 90%; /* Ajuste a largura conforme necessário */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px; /* Tamanho da fonte para melhor legibilidade */
+}
+
+.modal textarea {
+  height: 100px; /* Altura fixa para a área de texto */
+  resize: vertical; /* Permite ao usuário ajustar a altura verticalmente */
+}
+
+.modal button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4a76a8;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.modal button:hover {
+  background-color: #367bb7;
+}
+
+/* Estilização Principal do Calendário */
+.react-big-calendar {
+  width: 100%;
+  max-width: 1000px; /* Tamanho máximo aumentado */
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais dramática */
+  border-radius: 15px; /* Bordas arredondadas */
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+.rbc-header {
+  background-color: #4a76a8;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 3px solid #fff; /* Bordas mais espessas */
+}
+
+/* Botões e Navegação */
+.rbc-toolbar button {
+  background-color: #4a76a8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s; /* Adicionado transformação */
+}
+
+.rbc-toolbar button:hover {
+  background-color: #3a5d7d;
+  transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+/* Estilo dos Eventos */
+.rbc-event {
+  background-color: #ff7f50;
+  color: white;
+  border-radius: 4px;
+  padding: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Destaque para o Dia Atual */
+.rbc-today {
+  background-color: #eaf6ff;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.date-time-picker {
+  width: 90%; /* Largura ajustada */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background-color: white;
+}
+
+.time-picker .react-time-picker__button {
+  display: none; /* Remove o botão padrão do time picker */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .react-big-calendar {
+    width: 100%;
+    max-width: 100%; /* Ajuste para telas menores */
+  }
+  .calendar-container {
+    height: auto; /* Altura auto para melhor visualização em dispositivos móveis */
+  }
+}
